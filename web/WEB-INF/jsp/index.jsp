@@ -4,12 +4,11 @@
 
 <html>
     <head>
-        <link href="styles/login.css" rel="stylesheet" type="text/css"/>
         <script src="https://kit.fontawesome.com/c5d333bbd9.js" crossorigin="anonymous"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Home Elazon</title>
     </head>
-
+    
     <body>
        
     </body>
