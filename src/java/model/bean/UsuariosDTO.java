@@ -5,13 +5,13 @@ public class UsuariosDTO {
     private static String nome;
     private String senha;
     private String email;
-    private char cpf;
-    private char telefone;
+    private int cpf;
+    private int telefone;
 
     public UsuariosDTO() {
     }
 
-    public UsuariosDTO(String senha, String email, char cpf, char telefone) {
+    public UsuariosDTO(String senha, String email, int cpf, int telefone) {
         this.senha = senha;
         this.email = email;
         this.cpf = cpf;
@@ -50,21 +50,21 @@ public class UsuariosDTO {
         this.email = email;
     }
 
-    public char getCpf() {
+    public int getCpf() {
         return cpf;
     }
 
-    public void setCpf(char cpf) {
+    public void setCpf(int cpf) {
         this.cpf = cpf;
     }
 
-    public char getTelefone() {
+    public int getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(char telefone) {
+    public void setTelefone(int telefone) {
         this.telefone = telefone;
     }
 
-   
+ 
 }

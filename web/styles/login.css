@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    margin: 0;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+body *{
+    box-sizing: border-box;
+}
+
+header{
+    width: 20vw;
+    position: relative;
+    left: 40vw;
+    top: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    width: 100vw;
+    height: 90vh;
+    background-image: url() ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login{
+    width: 50vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: rgb(141, 145, 148) ;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px rgb(73, 72, 72) ;
+}
+.card-login h1{
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    margin: 0;
+}
+.inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.inputs input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px rgb(90, 87, 87) ;
+    outline: none;
+    box-sizing: border-box;
+}
+#icon{
+    font-size: 27px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    bottom: 36px;
+    right: 28px;
+}
+.inputs input:hover{
+    border: 1px solid rgb(216, 148, 2);
+}
+
+.inputs label{
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+
+.inputs input::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+.btnLogin{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    box-shadow: 0 10px 40px -12px rgb(216, 148, 2);
+}
+.btnLogin:hover{
+    transform: scale(1.05);
+    background-color:rgb(216, 148, 2);
+
+}

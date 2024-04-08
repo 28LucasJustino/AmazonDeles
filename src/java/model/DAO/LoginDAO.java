@@ -29,8 +29,8 @@ public class LoginDAO {
                 usuario.setNome(rs.getString("nome"));
                 usuario.setSenha(rs.getString("senha"));
                 usuario.setEmail(rs.getString("email"));
-                //usuario.setCpf(rs.getString("cpf"));
-               // usuario.setTelefone(rs.getString("telefone"));
+                usuario.setCpf(rs.getInt("cpf"));
+                usuario.setTelefone(rs.getInt("telefone"));
                 user.add(usuario);
             }
             rs.close();
@@ -54,8 +54,8 @@ public class LoginDAO {
             stmt.setString(1, UsuariosDTO.getNome());
             stmt.setString(2, createLogin.getSenha());
             stmt.setString(3, createLogin.getEmail());
-           // stmt.setString(4, createLogin.getCpf());
-           // stmt.setString(5, createLogin.getTelefone());
+            stmt.setInt(4, createLogin.getCpf());
+            stmt.setInt(5, createLogin.getTelefone());
             stmt.executeUpdate();
 
             stmt.close();
@@ -67,15 +67,15 @@ public class LoginDAO {
 
     }
 
-    public Boolean login(String nome, String senha) {
+    public Boolean login(String email, String senha) {
         Boolean validar = false;
         try {
             Connection conexao = Conexao.conectar();
             PreparedStatement stmt = null;
             ResultSet rs = null;
 
-            stmt = conexao.prepareStatement("SELECT * FROM usuario WHERE nome = ? AND senha = ?");
-            stmt.setString(1, nome);
+            stmt = conexao.prepareStatement("SELECT * FROM usuario WHERE email = ? AND senha = ?");
+            stmt.setString(1, email);
             stmt.setString(2, senha);
             rs = stmt.executeQuery();
 
