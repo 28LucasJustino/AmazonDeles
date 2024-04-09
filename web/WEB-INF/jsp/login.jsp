@@ -22,8 +22,8 @@
                 <div class="card-login">
                     <h1>Login</h1>
                     <div class="inputs">
-                        <label for="usuario">Email</label>
-                        <input type="text"  name="usuario"  placeholder="Email"><i class="fa-solid fa-user" id="icon"></i>
+                        <label for="email">Email</label>
+                        <input type="email"  name="email"  placeholder="Email"><i class="fa-solid fa-user" id="icon"></i>
                     </div>                           
                     <div class="inputs">
                         <label for="senha">Senha</label>
