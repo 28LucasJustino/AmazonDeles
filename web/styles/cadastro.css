@@ -1,74 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-*{
-    box-sizing: border-box;
-    margin: 0;
+* {
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: "Roboto Condensed", sans-serif;
 }
 
-header{
-    width: 20vw;
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    left: 40vw;
-    top: 4vw;
+    
 }
 
-.cadastro{
+.container {
     width: 80%;
     height: 80vh;
     display: flex;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
 }
 
-.cadastro h1{
-    color: rgb(0, 0, 0);
-    font-weight: 800;
-    margin: 0;
+.form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 3rem;
 }
 
-.inputs{
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-button button {
+    border: none;
+    background-color:rgb(216, 148, 2);
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button button:hover {
+    transform: scale(1.0);
+    background-color:rgb(156, 104, 26);
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color:#fff;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color:rgb(216, 148, 2);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.inputs {
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
 }
 
-.inputs input{
-    width: 100%;
+.inputs input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
     border: none;
     border-radius: 10px;
-    padding: 15px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px rgb(90, 87, 87) ;
-    outline: none;
-    box-sizing: border-box;
-}
-.inputs #icon{
-    font-size: 27px;
-    color: rgb(0, 0, 0);
-    position: relative;
-    bottom: 36px;
-    right: 28px;
-}
-.inputs input:hover{
-    border: 1px solid rgb(216, 148, 2);
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
 }
 
-.inputs label{
-    color: rgb(0, 0, 0);
-    margin-bottom: 10px;
+.inputs input:hover {
+    background-color: #eeeeee75;
+    outline: 1px solid rgb(216, 148, 2);
 }
 
-.inputs input::placeholder{
-    color: rgb(0, 0, 0);
+.inputs label,
+.gender-inputs h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
 }
-.card-gender {
+
+.inputs input::placeholder {
+    color: #000000be;
+}
+
+.gender-group {
     display: flex;
     justify-content: space-between;
-    padding: 0.8rem;
+    margin-top: 0.62rem;
+    padding: 0 .5rem;
 }
 
 .gender-input {
@@ -77,31 +124,90 @@ header{
 }
 
 .gender-input input {
-    margin-right: 0.36rem;
+    margin-right: 0.35rem;
 }
 
 .gender-input label {
-    font-size: 0.91rem;
+    font-size: 0.81rem;
     font-weight: 600;
     color: #000000c0;
 }
+
+#icon{
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    bottom: 36px;
+    left: 4px;
+}
+#icon2{
+    font-size: 27px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    bottom: 36px;
+    right: 28px;
+}
 .btnLogin{
     width: 100%;
-    margin-top: 2.5rem;
+    padding: 16px 0px;
+    margin: 25px;
     border: none;
-    background-color:rgb(216, 148, 2);
-    padding: 0.62rem;
-    border-radius: 5px;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color:#fff;
+    background-color: rgb(216, 148, 2);
     cursor: pointer;
+    box-shadow: 0 10px 40px -12px rgb(216, 148, 2);
 }
-.btnLogin button a {
+.btnLogin a{
     text-decoration: none;
     font-size: 0.93rem;
     font-weight: 500;
-    color: #fff;
+    color:  rgb(0, 0, 0);
 }
 .btnLogin:hover{
     transform: scale(1.05);
     background-color:rgb(216, 148, 2);
 
+}
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    .input-group {
+        flex-direction: column;
+        z-index: 5;
+        padding-right: 5rem;
+        max-height: 10rem;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+    }
+    .gender-inputs {
+        margin-top: 2rem;
+    }
+    .gender-group {
+        flex-direction: column;
+    }
+    .gender-title h6 {
+        margin: 0;
+    }
+    .gender-input {
+        margin-top: 0.5rem;
+    }
 }

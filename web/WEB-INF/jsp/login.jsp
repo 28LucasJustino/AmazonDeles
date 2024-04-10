@@ -14,24 +14,27 @@
         <title>Login Elazon</title>
     </head>
     <body>
-        <header>
-            <img src="assets/Captura_de_tela_2024-04-08_153808-removebg-preview.png" alt=""/>
-    </header>
-     <main>
-            <div class="login">
-                <div class="card-login">
-                    <h1>Login</h1>
-                    <div class="inputs">
-                        <label for="email">Email</label>
-                        <input type="email"  name="email"  placeholder="Email" required><i class="fa-solid fa-user" id="icon"></i>
-                    </div>                           
-                    <div class="inputs">
-                        <label for="senha">Senha</label>
-                        <input type="password" name="senha" placeholder="Senha" required><i class="fa-solid fa-lock" id="icon"></i>
-                    </div>
-                        <button class="btnLogin">Confirmar</button>
+    <header>
+        <img src="assets/Captura_de_tela_2024-04-08_153808-removebg-preview.png" alt=""/>
+</header>
+ <main>
+        <div class="login">
+            <div class="card-login">
+                <h1>Login</h1>
+                <div class="inputs">
+                    <label for="email">Email</label>
+                    <input type="email"  name="email"  placeholder="Email" required><i class="fa-solid fa-user" id="icon"></i>
+                </div>                           
+                <div class="inputs">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" placeholder="Senha" required><i class="fa-solid fa-lock" id="icon"></i>
                 </div>
+                    <button class="btnLogin">Confirmar</button>
+                    <div class="login-button">
+                        <button><a href="#">Não tem Conta Ainda?</a></button>
+                    </div>
             </div>
-    </main>
+        </div>
+</main>
     </body>
 </html>
