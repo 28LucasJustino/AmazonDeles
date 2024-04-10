@@ -23,11 +23,11 @@
                     <h1>Login</h1>
                     <div class="inputs">
                         <label for="email">Email</label>
-                        <input type="email"  name="email"  placeholder="Email"><i class="fa-solid fa-user" id="icon"></i>
+                        <input type="email"  name="email"  placeholder="Email" required><i class="fa-solid fa-user" id="icon"></i>
                     </div>                           
                     <div class="inputs">
                         <label for="senha">Senha</label>
-                        <input type="password" name="senha" placeholder="Senha"><i class="fa-solid fa-lock" id="icon"></i>
+                        <input type="password" name="senha" placeholder="Senha" required><i class="fa-solid fa-lock" id="icon"></i>
                     </div>
                         <button class="btnLogin">Confirmar</button>
                 </div>
