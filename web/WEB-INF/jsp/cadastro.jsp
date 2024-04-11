@@ -14,15 +14,11 @@
         <title>Cadastro Elason</title>
     </head>
     <body>
-        <header>
-            <img src="assets/Captura_de_tela_2024-04-08_153808-removebg-preview.png" alt=""/>
-    </header>
-     <main>
         <div class="container">
             <div class="form">
                 <form action="#">
                     <div class="form-header">
-                        <img src="./assets/img/Captura_de_tela_2024-04-08_153808-removebg-preview.png" alt="">
+                        <img src="assets/Captura_de_tela_2024-04-08_153808-removebg-preview.png" alt=""/>
                         <div class="title">
                             <h1>Cadastre-se</h1>
                         </div>
@@ -88,7 +84,6 @@
                     </div>
                 </form>
             </div>
-        </div>    
-    </main>    
+        </div>
     </body>
 </html>
