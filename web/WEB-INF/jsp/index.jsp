@@ -11,6 +11,7 @@
     </head>
     
     <body>
+        <main>
      <div class="container">
             <div class="form">
                 <form action="#">
@@ -82,5 +83,6 @@
                 </form>
             </div>
         </div>
+    </main>
     </body>
 </html>
