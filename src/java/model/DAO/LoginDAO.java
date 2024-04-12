@@ -1,8 +1,8 @@
 
 package model.DAO;
 
-import com.mysql.jdbc.Connection;
 import conexao.Conexao;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -39,6 +39,7 @@ public class LoginDAO {
 
         } catch (SQLException e) {
             e.printStackTrace();
+            JOptionPane.showMessageDialog(null,"LoginDAO READ:" + e);
         }
 
         return user;
@@ -63,6 +64,7 @@ public class LoginDAO {
             JOptionPane.showMessageDialog(null, "Usuário criado com sucesso!");
         } catch (SQLException e) {
             e.printStackTrace();
+            JOptionPane.showMessageDialog(null,"LoginDAO CREATE:" + e);
         }
 
     }
@@ -88,6 +90,7 @@ public class LoginDAO {
             conexao.close();
         } catch (SQLException e) {
             e.printStackTrace();
+            JOptionPane.showMessageDialog(null,"LoginDAO BOOLEAN:" + e);
         }
         return validar;
     }

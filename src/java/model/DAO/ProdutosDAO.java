@@ -1,6 +1,6 @@
 package model.DAO;
 
-import com.mysql.jdbc.Connection;
+import java.sql.Connection;
 import conexao.Conexao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -40,6 +40,7 @@ public class ProdutosDAO {
 
         } catch (SQLException e) {
             e.printStackTrace();
+            JOptionPane.showMessageDialog(null,"ProdutoDAO READ:" + e);
         }
 
         return objProdut;
