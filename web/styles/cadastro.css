@@ -12,14 +12,13 @@ body main {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .container {
     width: 80%;
     height: 80vh;
     display: flex;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.555);
 }
 
 .form {
@@ -93,6 +92,7 @@ body main {
     border-radius: 10px;
     box-shadow: 1px 1px 6px #0000001c;
     font-size: 0.8rem;
+    cursor: text;
 }
 
 .inputs input:hover {
@@ -136,11 +136,8 @@ body main {
 #icon{
     font-size: 17px;
     color: rgb(0, 0, 0);
-    position: relative;
-    bottom: 36px;
-    left: 4px;
 }
-#icon2{
+#iconG{
     font-size: 27px;
     color: rgb(0, 0, 0);
     position: relative;

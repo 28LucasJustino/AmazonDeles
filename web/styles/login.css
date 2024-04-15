@@ -65,6 +65,7 @@ main{
     box-shadow: 0px 10px 40px rgb(90, 87, 87) ;
     outline: none;
     box-sizing: border-box;
+    cursor: text;
 }
 #icon{
     font-size: 27px;

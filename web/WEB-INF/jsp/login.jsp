@@ -12,7 +12,7 @@
         <link href="styles/login.css" rel="stylesheet" type="text/css"/>
         <script src="https://kit.fontawesome.com/c5d333bbd9.js" crossorigin="anonymous"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login Elazon</title>
+        <title>Elason- Login</title>
     </head>
     <body>
     <header>
@@ -32,7 +32,7 @@
                 </div>
                     <button class="btnLogin">Confirmar</button>
                     <div class="login-button">
-                        <button><a href="#">Não tem Conta Ainda?</a></button>
+                        <button><a href="./Cadastro-Elazon">Não tem Conta Ainda?</a></button>
                     </div>
             </div>
         </div>

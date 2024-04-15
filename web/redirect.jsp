@@ -6,5 +6,6 @@ This JSP is here to provide a redirect to the dispatcher
 servlet but should be the only JSP outside of WEB-INF.
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% response.sendRedirect("index.htm"); %>
-<img src="assets/Captura_de_tela_2024-04-08_153808-removebg-preview.png" alt=""/>
+<% response.sendRedirect("./Elazon"); %>
+<link href="styles/produto.css" rel="stylesheet" type="text/css"/>
+<link href="styles/categorias.css" rel="stylesheet" type="text/css"/>
