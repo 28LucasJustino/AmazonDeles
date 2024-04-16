@@ -19,7 +19,7 @@
         <img src="assets/Captura_de_tela_2024-04-08_153808-removebg-preview.png" alt=""/>
 </header>
  <main>
-        <div class="login">
+        <form action="log" class="login" >
             <div class="card-login">
                 <h1>Login</h1>
                 <div class="inputs">
@@ -35,7 +35,7 @@
                         <button><a href="./Cadastro-Elazon">Não tem Conta Ainda?</a></button>
                     </div>
             </div>
-        </div>
+        </form>
 </main>
     </body>
 </html>

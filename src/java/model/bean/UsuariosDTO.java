@@ -2,7 +2,7 @@ package model.bean;
 
 public class UsuariosDTO {
     private static int idUsuarios;
-    private static String nome;
+    private  String nome;
     private String senha;
     private String email;
     private int cpf;
@@ -11,7 +11,8 @@ public class UsuariosDTO {
     public UsuariosDTO() {
     }
 
-    public UsuariosDTO(String senha, String email, int cpf, int telefone) {
+    public UsuariosDTO(String nome, String senha, String email, int cpf, int telefone) {
+        this.nome = nome;
         this.senha = senha;
         this.email = email;
         this.cpf = cpf;
@@ -26,12 +27,12 @@ public class UsuariosDTO {
         UsuariosDTO.idUsuarios = idUsuarios;
     }
 
-    public static String getNome() {
+    public String getNome() {
         return nome;
     }
 
-    public static void setNome(String nome) {
-        UsuariosDTO.nome = nome;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getSenha() {
@@ -65,6 +66,5 @@ public class UsuariosDTO {
     public void setTelefone(int telefone) {
         this.telefone = telefone;
     }
-
- 
+    
 }

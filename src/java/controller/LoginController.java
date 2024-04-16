@@ -12,6 +12,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.DAO.LoginDAO;
+import model.bean.UsuariosDTO;
 
 /**
  *
@@ -48,7 +50,35 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       String url = request.getServletPath();
+        if (url.equals("/log")) {
+            String nextPage = "/WEB-INF/jsp/index.jsp";
+            UsuariosDTO user = new UsuariosDTO();
+            LoginDAO valida = new LoginDAO();
+
+            user.setEmail(request.getParameter("username"));
+            user.setSenha(request.getParameter("password"));
+
+            try {              
+
+                if (valida.login(user.getEmail(),user.getSenha())) {
+                    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+                    dispatcher.forward(request, response);
+                } else {
+                    nextPage = "/WEB-INF/jsp/login.jsp";
+                    request.setAttribute("errorMessage", "Usuário ou senha inválidos");
+                    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+                    dispatcher.forward(request, response);
+                }
+            } catch (Exception e) {
+                nextPage = "/WEB-INF/jsp/login.jsp";
+                request.setAttribute("errorMessage", "Usuário ou senha inválidos");
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+                dispatcher.forward(request, response);
+            }
+        } else {
+            processRequest(request, response);
+        }
     }
 
     /**

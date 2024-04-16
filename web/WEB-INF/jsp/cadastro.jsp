@@ -17,8 +17,8 @@
     <body>
         <main>
             <div class="container">
-                   <div class="form">
-                       <form action="#">
+                   <div>
+                       <form class="form" action="cad">
                            <div class="form-header">
                                <img src="assets/Captura_de_tela_2024-04-08_153808-removebg-preview.png" alt=""/>
                                <div class="title">
