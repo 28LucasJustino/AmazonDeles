@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 import model.DAO.LoginDAO;
 import model.bean.UsuariosDTO;
 
@@ -56,11 +57,11 @@ public class LoginController extends HttpServlet {
             UsuariosDTO user = new UsuariosDTO();
             LoginDAO valida = new LoginDAO();
 
-            user.setEmail(request.getParameter("username"));
-            user.setSenha(request.getParameter("password"));
+            user.setEmail(request.getParameter("email"));
+            user.setSenha(request.getParameter("senha"));
 
             try {              
-
+              
                 if (valida.login(user.getEmail(),user.getSenha())) {
                     RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
                     dispatcher.forward(request, response);

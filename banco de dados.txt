@@ -1,0 +1,22 @@
+CREATE DATABASE eles;
+USE eles;
+
+CREATE TABLE usuario(
+idUsuario INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100),
+senha VARCHAR(45),
+email VARCHAR(130),
+cpf INT,
+telefone INT);
+
+CREATE TABLE produto(
+idProduto INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(45),
+categoria VARCHAR(40),
+descricao tinytext,
+preco float,
+estoque int);
+
+insert into usuario(nome,senha,email,cpf,telefone)
+values
+('lucas',123,'lucas@gmail.com',122414,141532523);

@@ -49,37 +49,7 @@ public class CadastroController extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-      String url = request.getServletPath();
-        if (url.equals("/log")) {
-            String nextPage = "/WEB-INF/jsp/index.jsp";
-            UsuariosDTO user = new UsuariosDTO();
-            LoginDAO valida = new LoginDAO();
-
-            user.setNome(request.getParameter("nome"));
-            user.setEmail(request.getParameter("email"));
-            user.setSenha(request.getParameter("senha"));
-
-            try {              
-
-                if (valida.login(user.getEmail(),user.getSenha())) {
-                    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
-                    dispatcher.forward(request, response);
-                } else {
-                    nextPage = "/WEB-INF/jsp/login.jsp";
-                    request.setAttribute("errorMessage", "Usuário ou senha inválidos");
-                    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
-                    dispatcher.forward(request, response);
-                }
-            } catch (Exception e) {
-                nextPage = "/WEB-INF/jsp/login.jsp";
-                request.setAttribute("errorMessage", "Usuário ou senha inválidos");
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
-                dispatcher.forward(request, response);
-            }
-        } else {
-            processRequest(request, response);
-        }
+            throws ServletException, IOException {   
     }
 
     /**
@@ -93,7 +63,39 @@ public class CadastroController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String url = request.getServletPath();
+        if (url.equals("/cad")) {
+            String nextPage = "/WEB-INF/jsp/login.jsp";
+            UsuariosDTO user = new UsuariosDTO();
+            LoginDAO valida = new LoginDAO();
+
+            user.setNome(request.getParameter("nome"));
+            user.setEmail(request.getParameter("email"));
+            user.setSenha(request.getParameter("senha"));
+            user.setCpf(Integer.parseInt(request.getParameter("cpf")));
+            
+            
+
+            try {              
+
+                if (valida.login(user.getEmail(),user.getSenha())) {
+                    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+                    dispatcher.forward(request, response);
+                } else {
+                    nextPage = "/WEB-INF/jsp/cadastro.jsp";
+                    request.setAttribute("errorMessage", "Usuário ou senha inválidos");
+                    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+                    dispatcher.forward(request, response);
+                }
+            } catch (Exception e) {
+                nextPage = "/WEB-INF/jsp/cadastro.jsp";
+                request.setAttribute("errorMessage", "Usuário ou senha inválidos");
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+                dispatcher.forward(request, response);
+            }
+        } else {
+            processRequest(request, response);
+        }
     }
 
     /**
