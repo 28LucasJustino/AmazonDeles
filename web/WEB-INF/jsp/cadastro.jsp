@@ -17,8 +17,8 @@
     <body>
         <main>
             <div class="container">
-                   <div>
-                       <form class="form" action="cad">
+                   <div class="form">
+                       <form action="cad" method="post">
                            <div class="form-header">
                                <img src="assets/Captura_de_tela_2024-04-08_153808-removebg-preview.png" alt=""/>
                                <div class="title">
@@ -47,7 +47,7 @@
                                </div>
                                <div class="inputs">
                                    <label for="confirmarSenha"> <i class="fa-solid fa-unlock" id="icon"></i> Confirme sua Senha</label>
-                                   <input id="confirmarSenha" type="password" name="  confirmarSenha" placeholder="  Digite sua senha novamente" required>
+                                   <input id="confirmarSenha" type="password" name="confirmarSenha" placeholder="  Digite sua senha novamente" required>
                                   
                                </div>
                                <div class="inputs">
@@ -91,7 +91,6 @@
                                <button class="btnLogin"><a href="./Login-Elazon">Confirmar</a></button>
                            </div>
                        </form>
-                   </div>
                </div>
            </main>
     </body>

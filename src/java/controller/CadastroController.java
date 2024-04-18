@@ -49,7 +49,8 @@ public class CadastroController extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {   
+            throws ServletException, IOException {
+        processRequest(request, response);
     }
 
     /**
@@ -74,23 +75,15 @@ public class CadastroController extends HttpServlet {
             user.setSenha(request.getParameter("senha"));
             user.setCpf(Integer.parseInt(request.getParameter("cpf")));
             user.setTelefone(Integer.parseInt(request.getParameter("telefone")));
-            
-            
 
             try {              
-
-                if (valida.login(user.getEmail(),user.getSenha())) {
+               valida.create(user); 
                     RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
                     dispatcher.forward(request, response);
-                } else {
-                    nextPage = "/WEB-INF/jsp/cadastro.jsp";
-                    request.setAttribute("errorMessage", "Usuário ou senha inválidos");
-                    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
-                    dispatcher.forward(request, response);
-                }
             } catch (Exception e) {
+                e.printStackTrace();
                 nextPage = "/WEB-INF/jsp/cadastro.jsp";
-                request.setAttribute("errorMessage", "Usuário ou senha inválidos");
+                request.setAttribute("errorMessage", "Usuário inválido");
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
                 dispatcher.forward(request, response);
             }
