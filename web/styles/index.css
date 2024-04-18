@@ -9,6 +9,8 @@
 header {
     background-color: #24252a;
     box-shadow: 0px 3px 10px #464646;
+    width: 100vw;
+    height: 12vh;
 }
 
 .Header-site{
@@ -16,15 +18,60 @@ header {
     justify-content: space-between;
     padding: 1.5rem 6rem;
 }
+#imageL{
+    display: flex;
+    width: 25vw;
+    position: relative;
+    bottom: 5vw;
+    right: 18vh;
+}
 .cate {
     display: flex;
     align-items: center;
+}
+.cate .inB{
+    width: 20vw;
+    height: 4vh;
+    cursor: text;
+    position: relative;
+    bottom: 5vw;
+    right: 8vh;
+}
+.cate .inB::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+.cate .inB:hover{
+    border: 1px solid rgb(216, 148, 2);
+}
+#iconB{
+    position: relative;
+    bottom: 5vw;
+    right: 8vh;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+}
+#iconB:hover{
+    transform: scale(1.0);
+    color: orange;
+}
+#iconC{
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+#iconC:hover{
+    transform: scale(1.0);
+    color: orange;
 }
 
 .cate ul {
     display: flex;
     justify-content: center;
     list-style: none;
+    position: relative;
+    bottom: 5vw;
 }
 
 .item {
@@ -36,66 +83,32 @@ header {
     font-size: 1.15rem;
     color: #fff;
     font-weight: 400;
+    cursor: pointer;
 }
 
-.login-button button {
+.link:hover{
+    transform: scale(1.0);
+    color: orange;
+}
+
+
+.btnCad button {
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
-    background-color: #0187a7;
+    background-color:rgb(10, 136, 136) ;
 }
 
-.login-button button a {
+.btnCad button a {
     text-decoration: none;
-    color: #fff;
+    color: black;
     font-weight: 500;
     font-size: 1.1rem;
 }
-
-.mobile-menu-icon {
-    display: none;
+.btnCad button:hover{
+    transform: scale(1.0);
+    background-color: orange;
 }
-
-.mobile-menu {
-    display: none;
-}
-
-@media screen and (max-width: 730px) {
-    .nav-bar {
-        padding: 1.5rem 4rem;
-    }
-    .nav-item {
-        display: none;
-    }
-    .login-button {
-        display: none;
-    }
-    .mobile-menu-icon {
-        display: block;
-    }
-    .mobile-menu-icon button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-    }
-    .mobile-menu ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 1rem;
-    }
-    .mobile-menu .nav-item {
-        display: block;
-        padding-top: 1.2rem;
-    }
-    .mobile-menu .login-button {
-        display: block;
-        padding: 1rem 2rem;
-    }
-    .mobile-menu .login-button button {
-        width: 100%;
-    }
-    .open {
-        display: block;
-    }
+.btnCad button a:hover {
+    transform: scale(1.0);
 }

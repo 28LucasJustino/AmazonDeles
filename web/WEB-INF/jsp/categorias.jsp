@@ -17,33 +17,19 @@
     <body>
         <header>
             <nav class="Header-site">
-                <img src="assets/Captura_de_tela_2024-04-15_150553-removebg-preview.png" alt=""/>
-                <div class="cate">
-                    <ul>
-                        <li class="item"><a href="./Elazon" class="link">Home</a></li>
-                        <li class="item"><a href="./Categorias-Elazon" class="link">Categorias</a></li>
-                        <li class="item"><a href="./Produto-Elazon" class="link">Produtos</a></li>
-                    </ul>
-                </div>
-                <div class="login-button">
-                    <button><a href="#">Entrar</a></button>
-                </div>
-    
-                <div class="mobile-menu-icon">
-                    <button onclick="menuShow()"><img class="icon" src="assets/menu_white_36dp.svg" alt=""></button>
-                </div>
-            </nav>
-            <div class="mobile-menu">
+                <img src="assets/Captura_de_tela_2024-04-15_150553-removebg-preview.png"  id="imageL" alt=""/>                               
+            <div class="cate">
+                <input type="text" placeholder="Busca" class="inB"><i class="fa-solid fa-magnifying-glass" id="iconB"></i>    
                 <ul>
-                    <li class="item"><a href="#" class="link">Início</a></li>
-                    <li class="item"><a href="#" class="link">Projetos</a></li>
-                    <li class="item"><a href="#" class="link">Sobre</a></li>
+                    <li class="item"><a href="./Elazon" class="link"><i class="fa-solid fa-house" id="iconC"></i>Home</a></li>
+                    <li class="item"><a href="./Categorias-Elazon" class="link"><i class="fa-solid fa-c" id="iconC"></i>ategorias</a></li>
+                    <li class="item"><a href="./Produto-Elazon" class="link"><i class="fa-solid fa-p" id="iconC"></i>rodutos</a></li>
                 </ul>
-    
-                <div class="login-button">
-                    <button><a href="#">Entrar</a></button>
-                </div>
             </div>
+            <div class="btnCad">
+                <button><a href="./Cadastro-Elazon">Entrar</a></button>
+            </div>
+        </nav>
         </header>
  
         <main>
