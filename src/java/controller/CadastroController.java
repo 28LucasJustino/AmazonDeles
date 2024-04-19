@@ -62,35 +62,34 @@ public class CadastroController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        String url = request.getServletPath();
-        if (url.equals("/cad")) {
-            String nextPage = "/WEB-INF/jsp/login.jsp";
-            UsuariosDTO user = new UsuariosDTO();
-            LoginDAO valida = new LoginDAO();
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    String url = request.getServletPath();
+    if (url.equals("/cad")) {
+        String nextPage = "/WEB-INF/jsp/login.jsp";
+        UsuariosDTO user = new UsuariosDTO();
+        LoginDAO valida = new LoginDAO();
 
-            user.setNome(request.getParameter("nome"));
-            user.setEmail(request.getParameter("email"));
-            user.setSenha(request.getParameter("senha"));
-            user.setCpf(Integer.parseInt(request.getParameter("cpf")));
-            user.setTelefone(Integer.parseInt(request.getParameter("telefone")));
-
-            try {              
-               valida.create(user); 
-                    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
-                    dispatcher.forward(request, response);
-            } catch (Exception e) {
-                e.printStackTrace();
-                nextPage = "/WEB-INF/jsp/cadastro.jsp";
-                request.setAttribute("errorMessage", "Usuário inválido");
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
-                dispatcher.forward(request, response);
-            }
-        } else {
-            processRequest(request, response);
+        user.setNome(request.getParameter("nome"));
+        user.setEmail(request.getParameter("email"));
+        user.setSenha(request.getParameter("senha"));
+        user.setCpf(Integer.parseInt(request.getParameter("cpf")));
+        user.setTelefone(Integer.parseInt(request.getParameter("telefone")));
+        
+        try {              
+            valida.create(user); 
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+            dispatcher.forward(request, response);
+        } catch (Exception e) {
+            e.printStackTrace();
+            nextPage = "/WEB-INF/jsp/cadastro.jsp";
+            request.setAttribute("errorMessage", "Usuário inválido");
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+            dispatcher.forward(request, response);
         }
+    } else {
+        processRequest(request, response);
     }
+}
 
     /**
      * Returns a short description of the servlet.

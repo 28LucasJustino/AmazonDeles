@@ -51,7 +51,7 @@ public class LoginDAO {
             Connection conexao = Conexao.conectar();
             PreparedStatement stmt = null;
 
-            stmt = conexao.prepareStatement("INSERT INTO usuario (nome, senha ,email ,cpf ,telefone) VALUES (?,?,?,?, ?)");
+            stmt = conexao.prepareStatement("INSERT INTO usuario (nome, senha ,email ,cpf ,telefone) VALUES (?,?,?,?,?)");
             stmt.setString(1, createLogin.getNome());
             stmt.setString(2, createLogin.getSenha());
             stmt.setString(3, createLogin.getEmail());

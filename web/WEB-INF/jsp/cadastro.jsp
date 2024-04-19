@@ -52,12 +52,12 @@
                                </div>
                                <div class="inputs">
                                    <label for="cpf"><i class="fa-solid fa-address-card" id="icon"></i> CPF</label>
-                                   <input type="number" name="cpf" placeholder="   Digite seu CPF" required>
+                                   <input type="text" name="cpf" placeholder="   Digite seu CPF" required>
                                    
                                </div> 
                                <div class="inputs">
                                    <label for="telefone"><i class="fa-solid fa-phone" id="icon"></i> Telefone</label>
-                                   <input type="number" name="telefone" placeholder="   Digite seu Telefone" required>
+                                   <input type="text" name="telefone" placeholder="   Digite seu Telefone" required>
                                   
                                </div> 
                            </div>
