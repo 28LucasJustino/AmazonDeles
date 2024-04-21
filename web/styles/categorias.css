@@ -65,7 +65,6 @@ header {
     transform: scale(1.0);
     color: orange;
 }
-
 .cate ul {
     display: flex;
     justify-content: center;
@@ -111,4 +110,12 @@ header {
 }
 .btnCad button a:hover {
     transform: scale(1.0);
+}
+
+.prod{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
 }

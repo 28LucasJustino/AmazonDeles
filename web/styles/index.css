@@ -65,7 +65,6 @@ header {
     transform: scale(1.0);
     color: orange;
 }
-
 .cate ul {
     display: flex;
     justify-content: center;

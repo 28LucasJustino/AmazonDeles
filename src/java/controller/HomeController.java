@@ -12,6 +12,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.DAO.ProdutosDAO;
+import model.bean.ProdutosDTO;
 
 /**
  *
@@ -48,7 +50,35 @@ public class HomeController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       String url = request.getServletPath();
+        if (url.equals("/busca")) {
+            String nextPage = "/WEB-INF/jsp/produtos.jsp";
+            ProdutosDTO user = new ProdutosDTO();
+            ProdutosDAO valida = new ProdutosDAO();
+
+            user.setNome(request.getParameter("email"));
+            user.setCategoria(request.getParameter("senha"));
+            user.setDescricao(request.getParameter("senha"));
+            user.setPreco(Float.parseFloat(request.getParameter("senha")));
+            user.setEstoque(Integer.parseInt(request.getParameter("senha")));
+            
+            
+
+            try {              
+                    
+                    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+                    dispatcher.forward(request, response);
+               
+                
+            } catch (Exception e) {
+                nextPage = "/WEB-INF/jsp/index.jsp";
+                request.setAttribute("errorMessage", "Usuário ou senha inválidos");
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+                dispatcher.forward(request, response);
+            }
+        } else {
+            processRequest(request, response);
+        }
     }
 
     /**
