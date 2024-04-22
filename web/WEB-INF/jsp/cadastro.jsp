@@ -46,8 +46,7 @@
                                     <div class="inputs">
                                         <label for="confirmarSenha"> <i class="fa-solid fa-unlock" id="icon"></i>
                                             Confirme sua Senha</label>
-                                        <input id="confirmarSenha" type="password" name="confirmarSenha"
-                                            placeholder="  Digite sua senha novamente" required>
+                                        <input id="confirmarSenha" type="password" name="confirmarSenha" placeholder="  Digite sua senha novamente" required>
 
                                     </div>
                                     <div class="inputs">
@@ -58,8 +57,7 @@
                                     <div class="inputs">
                                         <label for="telefone"><i class="fa-solid fa-phone" id="icon"></i>
                                             Telefone</label>
-                                        <input type="number" name="telefone" placeholder="   Digite seu Telefone"
-                                            required>
+                                        <input type="number" name="telefone" placeholder="   Digite seu Telefone" required>
 
                                     </div>
                                 </div>
@@ -94,7 +92,7 @@
                                 </div>
 
                                 <div class="continue-button">
-                                    <button class="btnLogin"><a href="./Login-Elazon">Confirmar</a></button>
+                                    <button class="btnLogin">Confirmar</button>
                                 </div>
                             </form>
                         </div>

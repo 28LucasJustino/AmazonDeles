@@ -76,7 +76,13 @@ public class CadastroController extends HttpServlet {
         user.setTelefone(Integer.parseInt(request.getParameter("telefone")));
         
         try {              
-            valida.create(user); 
+            
+            if(user.getNome().trim().equals("") && (user.getEmail().trim().equals("")) && (user.getSenha().trim().equals(""))){
+                nextPage = "/WEB-INF/jsp/cadastro.jsp";
+                    request.setAttribute("errorMessage", "ERRO");
+            } else{
+                valida.create(user); 
+            }
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
             dispatcher.forward(request, response);
         } catch (Exception e) {

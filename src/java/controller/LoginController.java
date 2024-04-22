@@ -62,7 +62,7 @@ public class LoginController extends HttpServlet {
 
             try {              
               
-                if (valida.login(user.getEmail(),user.getSenha())) {
+                if (valida.login(user.getEmail().trim(),user.getSenha().trim())) {
                     RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
                     dispatcher.forward(request, response);
                 } else {

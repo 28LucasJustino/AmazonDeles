@@ -39,7 +39,6 @@ public class LoginDAO {
 
         } catch (SQLException e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null,"LoginDAO READ:" + e);
         }
 
         return user;
@@ -51,7 +50,7 @@ public class LoginDAO {
             Connection conexao = Conexao.conectar();
             PreparedStatement stmt = null;
 
-            stmt = conexao.prepareStatement("INSERT INTO usuario (nome, senha ,email ,cpf ,telefone) VALUES (?,?,?,?,?)");
+            stmt = conexao.prepareStatement("INSERT INTO usuario (nome,senha,email,cpf,telefone) VALUES (?,?,?,?,?)");
             stmt.setString(1, createLogin.getNome());
             stmt.setString(2, createLogin.getSenha());
             stmt.setString(3, createLogin.getEmail());
@@ -61,10 +60,8 @@ public class LoginDAO {
 
             stmt.close();
             conexao.close();
-            JOptionPane.showMessageDialog(null, "Usuário criado com sucesso!");
         } catch (SQLException e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null,"LoginDAO CREATE:" + e);
         }
 
     }
@@ -90,7 +87,6 @@ public class LoginDAO {
             conexao.close();
         } catch (SQLException e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null,"LoginDAO BOOLEAN:" + e);
         }
         return validar;
     }
