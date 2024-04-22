@@ -80,11 +80,14 @@ public class CadastroController extends HttpServlet {
             if(user.getNome().trim().equals("") && (user.getEmail().trim().equals("")) && (user.getSenha().trim().equals(""))){
                 nextPage = "/WEB-INF/jsp/cadastro.jsp";
                     request.setAttribute("errorMessage", "ERRO");
+                    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+            dispatcher.forward(request, response);
             } else{
                 valida.create(user); 
-            }
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
             dispatcher.forward(request, response);
+            }
+            
         } catch (Exception e) {
             e.printStackTrace();
             nextPage = "/WEB-INF/jsp/cadastro.jsp";

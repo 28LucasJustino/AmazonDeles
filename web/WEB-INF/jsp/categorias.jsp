@@ -44,8 +44,10 @@
             </nav>     
         </header>
         <main>  
-            <br><br> <br><br>
-            <div class="prod">               
+            <button><i class="fa-solid fa-phone"></i></button> 
+            <button><i class="fa-solid fa-headphones"></i></button> 
+            <br><br>  
+            <div class="prod">              
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="..." alt="Card image cap">
                 <div class="card-body">
