@@ -91,24 +91,24 @@ header {
 }
 
 
-.btnCad button {
+.btnCad #btn {
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     background-color:rgb(10, 136, 136) ;
 }
 
-.btnCad button a {
+.btnCad #btn a {
     text-decoration: none;
     color: black;
     font-weight: 500;
     font-size: 1.1rem;
 }
-.btnCad button:hover{
+.btnCad #btn:hover{
     transform: scale(1.0);
     background-color: orange;
 }
-.btnCad button a:hover {
+.btnCad #btn a:hover {
     transform: scale(1.0);
 }
 
@@ -118,4 +118,8 @@ header {
     justify-content: space-around;
     margin: 0;
     padding: 0;
+}
+#cate {
+    display: flex;
+    align-items: center; 
 }

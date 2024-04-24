@@ -1,3 +1,4 @@
+drop database eles;
 CREATE DATABASE eles;
 USE eles;
 
@@ -6,8 +7,8 @@ idUsuario INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(100),
 senha VARCHAR(45),
 email VARCHAR(130),
-cpf INT,
-telefone INT);
+cpf varchar(11),
+telefone varchar(11));
 
 CREATE TABLE produto(
 idProduto INT AUTO_INCREMENT PRIMARY KEY,
@@ -18,5 +19,47 @@ preco float,
 estoque int);
 
 insert into usuario(nome,senha,email,cpf,telefone)
-values
-('lucas',123,'lucas@gmail.com',122414,141532523);
+values('lucas','123','lucas@gmail.com',4745,2525);
+
+INSERT INTO produto (nome, categoria, descricao, preco, estoque)
+VALUES
+('Smartphone X', 'Eletrônicos', 'Um smartphone avançado com câmera de alta resolução e desempenho rápido.', 799.99, 100),
+('Notebook Y', 'Informática', 'Um notebook leve e potente, ideal para uso profissional e pessoal.', 1299.99, 50),
+('Fones de Ouvido Z', 'Acessórios de Áudio', 'Fones de ouvido sem fio com cancelamento de ruído e alta qualidade sonora.', 199.99, 200),
+('Câmera Digital A', 'Fotografia', 'Uma câmera digital compacta com lente zoom e modos de fotografia avançados.', 399.99, 75),
+('Console de Videogame B', 'Games', 'Um console de videogame de última geração com gráficos de alta definição e jogos exclusivos.', 499.99, 150),
+('Smartwatch C', 'Acessórios de Tecnologia', 'Um smartwatch elegante com monitor de atividades físicas e notificações inteligentes.', 299.99, 120),
+('Tablet D', 'Informática', 'Um tablet versátil com tela de alta resolução e desempenho multitarefa.', 349.99, 80),
+('Caixa de Som Bluetooth E', 'Acessórios de Áudio', 'Uma caixa de som portátil com conexão Bluetooth e som estéreo potente.', 79.99, 300),
+('Monitor F', 'Informática', 'Um monitor widescreen com cores vibrantes e ajustes de altura.', 249.99, 100),
+('Câmera de Segurança G', 'Segurança Doméstica', 'Uma câmera de segurança com visão noturna e detecção de movimento.', 129.99, 50),
+('Impressora H', 'Informática', 'Uma impressora multifuncional com conectividade sem fio e impressão de alta qualidade.', 149.99, 70),
+('Teclado Gamer I', 'Acessórios de Informática', 'Um teclado mecânico com iluminação RGB e teclas programáveis.', 99.99, 120),
+('Mochila J', 'Acessórios de Viagem', 'Uma mochila resistente e espaçosa, ideal para viagens e uso diário.', 49.99, 200),
+('Mouse sem Fio K', 'Acessórios de Informática', 'Um mouse ergonômico com sensor óptico e conexão sem fio.', 29.99, 250),
+('Cadeira de Escritório L', 'Móveis', 'Uma cadeira ergonômica com ajustes de altura e apoio lombar.', 199.99, 50),
+('Panela Elétrica M', 'Eletrodomésticos', 'Uma panela elétrica multifuncional com programas de cozimento pré-programados.', 79.99, 100),
+('Ventilador N', 'Eletrodomésticos', 'Um ventilador de torre com controle remoto e ajuste de velocidade.', 69.99, 150),
+('Smart TV O', 'Eletrônicos', 'Uma Smart TV com resolução 4K e acesso a aplicativos de streaming.', 699.99, 80),
+('Liquidificador P', 'Eletrodomésticos', 'Um liquidificador potente com várias velocidades e lâmina em aço inoxidável.', 39.99, 120),
+('Cafeteira Q', 'Eletrodomésticos', 'Uma cafeteira programável com jarra de vidro e função de manter aquecido.', 49.99, 100),
+('Smartphone X', 'Eletrônicos', 'Um smartphone avançado com câmera de alta resolução e desempenho rápido.', 799.99, 100),
+('Notebook Y', 'Informática', 'Um notebook leve e potente, ideal para uso profissional e pessoal.', 1299.99, 50),
+('Fones de Ouvido Z', 'Acessórios de Áudio', 'Fones de ouvido sem fio com cancelamento de ruído e alta qualidade sonora.', 199.99, 200),
+('Câmera Digital A', 'Fotografia', 'Uma câmera digital compacta com lente zoom e modos de fotografia avançados.', 399.99, 75),
+('Console de Videogame B', 'Games', 'Um console de videogame de última geração com gráficos de alta definição e jogos exclusivos.', 499.99, 150),
+('Smartwatch C', 'Acessórios de Tecnologia', 'Um smartwatch elegante com monitor de atividades físicas e notificações inteligentes.', 299.99, 120),
+('Tablet D', 'Informática', 'Um tablet versátil com tela de alta resolução e desempenho multitarefa.', 349.99, 80),
+('Caixa de Som Bluetooth E', 'Acessórios de Áudio', 'Uma caixa de som portátil com conexão Bluetooth e som estéreo potente.', 79.99, 300),
+('Monitor F', 'Informática', 'Um monitor widescreen com cores vibrantes e ajustes de altura.', 249.99, 100),
+('Câmera de Segurança G', 'Segurança Doméstica', 'Uma câmera de segurança com visão noturna e detecção de movimento.', 129.99, 50),
+('Impressora H', 'Informática', 'Uma impressora multifuncional com conectividade sem fio e impressão de alta qualidade.', 149.99, 70),
+('Teclado Gamer I', 'Acessórios de Informática', 'Um teclado mecânico com iluminação RGB e teclas programáveis.', 99.99, 120),
+('Mochila J', 'Acessórios de Viagem', 'Uma mochila resistente e espaçosa, ideal para viagens e uso diário.', 49.99, 200),
+('Mouse sem Fio K', 'Acessórios de Informática', 'Um mouse ergonômico com sensor óptico e conexão sem fio.', 29.99, 250),
+('Cadeira de Escritório L', 'Móveis', 'Uma cadeira ergonômica com ajustes de altura e apoio lombar.', 199.99, 50),
+('Panela Elétrica M', 'Eletrodomésticos', 'Uma panela elétrica multifuncional com programas de cozimento pré-programados.', 79.99, 100),
+('Ventilador N', 'Eletrodomésticos', 'Um ventilador de torre com controle remoto e ajuste de velocidade.', 69.99, 150),
+('Smart TV O', 'Eletrônicos', 'Uma Smart TV com resolução 4K e acesso a aplicativos de streaming.', 699.99, 80),
+('Liquidificador P', 'Eletrodomésticos', 'Um liquidificador potente com várias velocidades e lâmina em aço inoxidável.', 39.99, 120),
+('Cafeteira Q', 'Eletrodomésticos', 'Uma cafeteira programável com jarra de vidro e função de manter aquecido.', 49.99, 100);

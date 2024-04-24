@@ -39,13 +39,19 @@
                     </ul>
                 </div>
                 <div class="btnCad">
-                    <button><a href="./Cadastro-Elazon">Entrar</a></button>
+                    <button id="btn"><a href="./Cadastro-Elazon">Entrar</a></button>
                 </div>
             </nav>     
         </header>
-        <main>  
-            <button><i class="fa-solid fa-phone"></i></button> 
-            <button><i class="fa-solid fa-headphones"></i></button> 
+        <main> 
+            <div id="cate">
+                <button><i class="fa-solid fa-mobile" id="iconC"></i>Celular</button> 
+                <button><i class="fa-solid fa-headphones" id="iconC"></i>HeadPhones</button> 
+                <button><i class="fa-solid fa-gamepad" id="iconC"></i>Console</button>
+                <button><i class="fa-solid fa-tablet" id="iconC"></i>Tablet</button>
+                <button><i class="fa-solid fa-tv" id="iconC"></i>Tv</button>
+                <button><i class="fa-solid fa-computer" id="iconC"></i>Computador</button>
+            </div>            
             <br><br>  
             <div class="prod">              
             <div class="card" style="width: 18rem;">
