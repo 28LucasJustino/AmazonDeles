@@ -72,8 +72,8 @@ public class CadastroController extends HttpServlet {
         user.setNome(request.getParameter("nome"));
         user.setEmail(request.getParameter("email"));
         user.setSenha(request.getParameter("senha"));
-        user.setCpf(Integer.parseInt(request.getParameter("cpf")));
-        user.setTelefone(Integer.parseInt(request.getParameter("telefone")));
+        user.setCpf(request.getParameter("cpf"));
+        user.setTelefone(request.getParameter("telefone"));
         
         try {              
             

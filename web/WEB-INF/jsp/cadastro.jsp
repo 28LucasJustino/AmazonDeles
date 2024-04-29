@@ -51,13 +51,13 @@
                                     </div>
                                     <div class="inputs">
                                         <label for="cpf"><i class="fa-solid fa-address-card" id="icon"></i> CPF</label>
-                                        <input type="number" name="cpf" placeholder="   Digite seu CPF" required>
+                                        <input  id="cpf" type="text" name="cpf" onkeypress="return numeros(event)" placeholder="   Digite seu CPF" maxlength="14" required >
 
                                     </div>
                                     <div class="inputs">
                                         <label for="telefone"><i class="fa-solid fa-phone" id="icon"></i>
                                             Telefone</label>
-                                        <input type="number" name="telefone" placeholder="   Digite seu Telefone" required>
+                                        <input id="telefone" type="text" name="telefone" onkeypress="return numeros(event)" placeholder="   Digite seu Telefone"  maxlength="14" required>
 
                                     </div>
                                 </div>

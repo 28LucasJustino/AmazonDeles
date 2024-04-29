@@ -29,8 +29,8 @@ public class LoginDAO {
                 usuario.setNome(rs.getString("nome"));
                 usuario.setSenha(rs.getString("senha"));
                 usuario.setEmail(rs.getString("email"));
-                usuario.setCpf(rs.getInt("cpf"));
-                usuario.setTelefone(rs.getInt("telefone"));
+                usuario.setCpf(rs.getString("cpf"));
+                usuario.setTelefone(rs.getString("telefone"));
                 user.add(usuario);
             }
             rs.close();
@@ -54,8 +54,8 @@ public class LoginDAO {
             stmt.setString(1, createLogin.getNome());
             stmt.setString(2, createLogin.getSenha());
             stmt.setString(3, createLogin.getEmail());
-            stmt.setInt(4, createLogin.getCpf());
-            stmt.setInt(5, createLogin.getTelefone());
+            stmt.setString(4, createLogin.getCpf());
+            stmt.setString(5, createLogin.getTelefone());
             stmt.executeUpdate();
 
             stmt.close();

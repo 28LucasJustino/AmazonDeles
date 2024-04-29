@@ -7,8 +7,8 @@ idUsuario INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(100),
 senha VARCHAR(45),
 email VARCHAR(130),
-cpf varchar(11),
-telefone varchar(11));
+cpf char(14),
+telefone char(14));
 
 CREATE TABLE produto(
 idProduto INT AUTO_INCREMENT PRIMARY KEY,
