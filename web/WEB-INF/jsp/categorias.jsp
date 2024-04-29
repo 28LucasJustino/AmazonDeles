@@ -46,12 +46,12 @@
         <main> 
             <br>
             <div id="cate">
-                <button id="btnC"><i class="fa-solid fa-headphones"></i>HeadPhones</button> 
-                <button id="btnC"><i class="fa-solid fa-gamepad"></i>Console</button>
-                <button id="btnC"><i class="fa-solid fa-tablet"></i>Tablet</button>
-                <button id="btnC"><i class="fa-solid fa-tv"></i>Tv</button>
-                <button id="btnC"><i class="fa-solid fa-computer"></i>Computador</button>
-                <button id="btnC"><i class="fa-solid fa-mobile"></i>Celular</button> 
+                <button id="btnC"><i class="fa-solid fa-headphones"></i> HeadPhones</button> 
+                <button id="btnC"><i class="fa-solid fa-gamepad"></i> Console</button>
+                <button id="btnC"><i class="fa-solid fa-tablet"></i> Tablet</button>
+                <button id="btnC"><i class="fa-solid fa-tv"></i> Tv</button>
+                <button id="btnC"><i class="fa-solid fa-computer"></i> Computador</button>
+                <button id="btnC"><i class="fa-solid fa-mobile"></i> Celular</button> 
             </div>            
             <br><br>  
             <div class="prod">              

@@ -30,3 +30,17 @@ function numeros(evt) {
         return false;
     return true;
 }
+const validarCampo = (inp, minLength) => {
+    inp.addEventListener('input', () => {
+        const value =inp.value;
+
+        if (value.length < minLength || !/^\d+$/.test(value)) {
+            inp.setCustomValidity(`O campo deve ter no mínimo ${minLength} caracteres e conter apenas números.`);
+        } else {
+            inp.setCustomValidity('');
+        }
+    });
+}
+
+validarCampo(inputCpf, 14);
+validarCampo(inputTelefone, 14);
