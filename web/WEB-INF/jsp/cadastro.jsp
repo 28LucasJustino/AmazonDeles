@@ -98,5 +98,5 @@
                         </div>
                 </main>
             </body>
-
+            <script src="js/inputs.js" type="text/javascript"></script>
             </html>

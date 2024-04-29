@@ -13,7 +13,7 @@
                 integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
                 crossorigin="anonymous">
             <script src="https://kit.fontawesome.com/c5d333bbd9.js" crossorigin="anonymous"></script>
-            <link href="styles/index.css" rel="stylesheet" type="text/css" />
+            <link href="styles/categorias.css" rel="stylesheet" type="text/css" />
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
                 integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
                 crossorigin="anonymous">
@@ -22,7 +22,7 @@
     </head>
     <body>
         <header>
-            <nav class="Header-site">
+            <nav class="Header-site"> 
                 <img src="assets/Captura_de_tela_2024-04-15_150553-removebg-preview.png" id="imageL" alt="" />             
                 <div class="cate">
                     <input type="text" placeholder="Busca" class="inB"><i class="fa-solid fa-magnifying-glass"
@@ -44,13 +44,14 @@
             </nav>     
         </header>
         <main> 
+            <br>
             <div id="cate">
-                <button><i class="fa-solid fa-mobile" id="iconC"></i>Celular</button> 
-                <button><i class="fa-solid fa-headphones" id="iconC"></i>HeadPhones</button> 
-                <button><i class="fa-solid fa-gamepad" id="iconC"></i>Console</button>
-                <button><i class="fa-solid fa-tablet" id="iconC"></i>Tablet</button>
-                <button><i class="fa-solid fa-tv" id="iconC"></i>Tv</button>
-                <button><i class="fa-solid fa-computer" id="iconC"></i>Computador</button>
+                <button id="btnC"><i class="fa-solid fa-headphones"></i>HeadPhones</button> 
+                <button id="btnC"><i class="fa-solid fa-gamepad"></i>Console</button>
+                <button id="btnC"><i class="fa-solid fa-tablet"></i>Tablet</button>
+                <button id="btnC"><i class="fa-solid fa-tv"></i>Tv</button>
+                <button id="btnC"><i class="fa-solid fa-computer"></i>Computador</button>
+                <button id="btnC"><i class="fa-solid fa-mobile"></i>Celular</button> 
             </div>            
             <br><br>  
             <div class="prod">              
@@ -136,15 +137,6 @@
 
         </footer>
     </body>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   
 </body>
     </html>
