@@ -20,19 +20,19 @@
                     <form action="log" class="login" method="get">
                         <div class="card-login">
                             <h1>Login</h1>
-                            <div class="inputs">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" placeholder="Email" required><i
+                            <div class="inputsL">
+                                <label id="labelL" for="email">Email</label>
+                                <input id="inputL" type="email" name="email" placeholder="Email" required><i
                                     class="fa-solid fa-user" id="icon"></i>
                             </div>
-                            <div class="inputs">
-                                <label for="senha">Senha</label>
-                                <input type="password" name="senha" placeholder="Senha" required><i
+                            <div class="inputsL">
+                                <label id="labelL" for="senha">Senha</label>
+                                <input id="inputL" type="password" name="senha" placeholder="Senha" required><i
                                     class="fa-solid fa-lock" id="icon"></i>
                             </div>
                             <button class="btnLogin">Confirmar</button>
                             <div class="login-button">
-                                <button><a href="./Cadastro-Elazon">Não tem Conta Ainda?</a></button>
+                                <button id="btnL"><a id="aL" href="./Cadastro-Elazon">Não tem Conta Ainda?</a></button>
                             </div>
                         </div>
                     </form>

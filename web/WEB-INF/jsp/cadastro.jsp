@@ -44,9 +44,9 @@
 
                                     </div>
                                     <div class="inputs">
-                                        <label for="confirmarSenha"> <i class="fa-solid fa-unlock" id="icon"></i>
-                                            Confirme sua Senha</label>
-                                        <input id="confirmarSenha" type="password" name="confirmarSenha" placeholder="  Digite sua senha novamente" required>
+                                        <label for="nascimento"> 
+                                           Data de Nascimento</label>
+                                        <input type="date" name="nascimento" placeholder="   Digite sua Data de Nascimento" required>
 
                                     </div>
                                     <div class="inputs">

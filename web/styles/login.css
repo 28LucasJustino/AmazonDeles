@@ -17,11 +17,11 @@ header{
 main{
     width: 100vw;
     height: 90vh;
-    background-image: url() ;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .login{
     width: 50vw;
     height: 90vh;
@@ -45,7 +45,7 @@ main{
     font-weight: 800;
     margin: 0;
 }
-.inputs{
+.inputsL{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -54,7 +54,7 @@ main{
     margin: 10px 0px;
 }
 
-.inputs input{
+.inputsL #inputL{
     width: 100%;
     border: none;
     border-radius: 10px;
@@ -74,16 +74,16 @@ main{
     bottom: 36px;
     right: 28px;
 }
-.inputs input:hover{
+.inputsL #inputL:hover{
     border: 1px solid rgb(216, 148, 2);
 }
 
-.inputs label{
+.inputsL #labelL{
     color: rgb(0, 0, 0);
     margin-bottom: 10px;
 }
 
-.inputs input::placeholder{
+.inputsL #inputL::placeholder{
     color: rgb(0, 0, 0);
 }
 
@@ -107,7 +107,7 @@ main{
     background-color:rgb(216, 148, 2);
 
 }
-.login-button button {
+.login-button #btnL {
     border: none;
     background-color:rgb(216, 148, 2);
     padding: 0.4rem 1rem;
@@ -120,7 +120,7 @@ main{
     background-color:rgb(216, 148, 2);
 }
 
-.login-button button a {
+.login-button #btnL #aL {
     text-decoration: none;
     font-weight: 500;
     color: #fff;
