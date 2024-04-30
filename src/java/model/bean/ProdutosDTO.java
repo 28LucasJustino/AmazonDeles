@@ -7,7 +7,7 @@ public class ProdutosDTO {
   private String descricao;
   private float preco;
   private int estoque;
-
+  
     public ProdutosDTO() {
     }
 

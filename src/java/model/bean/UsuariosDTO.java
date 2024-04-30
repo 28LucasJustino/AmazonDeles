@@ -1,5 +1,7 @@
 package model.bean;
 
+import java.sql.Date;
+
 public class UsuariosDTO {
     private static int idUsuarios;
     private  String nome;
@@ -7,8 +9,18 @@ public class UsuariosDTO {
     private String email;
     private String cpf;
     private String telefone;
+    private Date nascimento;
 
     public UsuariosDTO() {
+    }
+
+    public UsuariosDTO(String nome, String senha, String email, String cpf, String telefone, Date nascimento) {
+        this.nome = nome;
+        this.senha = senha;
+        this.email = email;
+        this.cpf = cpf;
+        this.telefone = telefone;
+        this.nascimento = nascimento;
     }
 
     public static int getIdUsuarios() {
@@ -59,12 +71,11 @@ public class UsuariosDTO {
         this.telefone = telefone;
     }
 
-    public UsuariosDTO(String nome, String senha, String email, String cpf, String telefone) {
-        this.nome = nome;
-        this.senha = senha;
-        this.email = email;
-        this.cpf = cpf;
-        this.telefone = telefone;
+    public Date getNascimento() {
+        return nascimento;
     }
 
+    public void setNascimento(Date nascimento) {
+        this.nascimento = nascimento;
+    }
 }

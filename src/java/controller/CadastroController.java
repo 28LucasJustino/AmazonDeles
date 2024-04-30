@@ -5,6 +5,7 @@
  */
 package controller;
 
+import java.sql.Date;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -74,10 +75,11 @@ public class CadastroController extends HttpServlet {
         user.setSenha(request.getParameter("senha"));
         user.setCpf(request.getParameter("cpf"));
         user.setTelefone(request.getParameter("telefone"));
+        user.setNascimento(Date.valueOf(request.getParameter("nascimento")));
         
         try {              
-            
-            if(user.getNome().trim().equals("") && (user.getEmail().trim().equals("")) && (user.getSenha().trim().equals(""))){
+          
+            if(user.getNome().trim().equals("") || (user.getEmail().trim().equals("")) || (user.getSenha().trim().equals(""))){
                 nextPage = "/WEB-INF/jsp/cadastro.jsp";
                     request.setAttribute("errorMessage", "ERRO");
                     RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);

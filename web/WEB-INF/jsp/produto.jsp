@@ -39,11 +39,11 @@
         </header>
 
        <main>
-        
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                    <input type="number">
+                    <input type="text">
        </main>
-
-       <footer>
-
-       </footer>
     </body>
 </html>

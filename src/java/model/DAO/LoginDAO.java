@@ -31,6 +31,7 @@ public class LoginDAO {
                 usuario.setEmail(rs.getString("email"));
                 usuario.setCpf(rs.getString("cpf"));
                 usuario.setTelefone(rs.getString("telefone"));
+                usuario.setNascimento(rs.getDate("nascimento"));
                 user.add(usuario);
             }
             rs.close();
@@ -50,12 +51,13 @@ public class LoginDAO {
             Connection conexao = Conexao.conectar();
             PreparedStatement stmt = null;
 
-            stmt = conexao.prepareStatement("INSERT INTO usuario (nome,senha,email,cpf,telefone) VALUES (?,?,?,?,?)");
+            stmt = conexao.prepareStatement("INSERT INTO usuario (nome,senha,email,cpf,telefone,nascimento) VALUES (?,?,?,?,?,?)");
             stmt.setString(1, createLogin.getNome());
             stmt.setString(2, createLogin.getSenha());
             stmt.setString(3, createLogin.getEmail());
             stmt.setString(4, createLogin.getCpf());
             stmt.setString(5, createLogin.getTelefone());
+            stmt.setDate(6, createLogin.getNascimento());
             stmt.executeUpdate();
 
             stmt.close();

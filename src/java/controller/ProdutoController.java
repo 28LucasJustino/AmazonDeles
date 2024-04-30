@@ -7,11 +7,15 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.DAO.ProdutosDAO;
+import model.bean.ProdutosDTO;
+
 
 /**
  *
@@ -60,10 +64,44 @@ public class ProdutoController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    String url = request.getServletPath();
+    if (url.equals("/")) {
+        String nextPage = "/WEB-INF/jsp/produto.jsp";
+        ProdutosDTO user = new ProdutosDTO();
+        ProdutosDAO valida = new ProdutosDAO();
+
+       /* user.setNome(request.getParameter("nome"));
+        user.setCategoria(request.getParameter("categoria"));
+        user.setSenha(request.getParameter("senha"));
+        user.setCpf(request.getParameter("cpf"));
+        user.setTelefone(request.getParameter("telefone"));
+        user.setNascimento(Date.valueOf(request.getParameter("nascimento")));
+        
+        try {              
+          
+            if(user.getNome().trim().equals("") || (user.getEmail().trim().equals("")) || (user.getSenha().trim().equals(""))){
+                nextPage = "/WEB-INF/jsp/cadastro.jsp";
+                    request.setAttribute("errorMessage", "ERRO");
+                    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+            dispatcher.forward(request, response);
+            } else{
+                valida.create(user); 
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+            dispatcher.forward(request, response);
+            }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+            nextPage = "/WEB-INF/jsp/cadastro.jsp";
+            request.setAttribute("errorMessage", "Usuário inválido");
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+            dispatcher.forward(request, response);
+        }
+    } else {
+        processRequest(request, response);*/
     }
+}
 
     /**
      * Returns a short description of the servlet.

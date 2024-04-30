@@ -30,34 +30,33 @@
                                 <div class="cards">
                                     <div class="inputs">
                                         <label for="nome"><i class="fa-solid fa-user" id="icon"></i> Nome</label>
-                                        <input type="text" name="nome" placeholder="  Digite seu Nome" required>
+                                        <input type="text" id="nome" name="nome" placeholder="  Digite seu Nome" required>
 
                                     </div>
                                     <div class="inputs">
                                         <label for="email"><i class="fa-solid fa-envelope" id="icon"></i> Email</label>
-                                        <input type="email" name="email" placeholder="   Digite seu Email" required>
+                                        <input type="email" id="email" name="email" placeholder="   Digite seu Email" required>
 
                                     </div>
                                     <div class="inputs">
                                         <label for="senha"><i class="fa-solid fa-unlock" id="icon"></i> Senha</label>
-                                        <input type="password" name="senha" placeholder="   Digite sua senha" required>
+                                        <input type="password" id="senha" name="senha" placeholder="   Digite sua senha" required>
 
                                     </div>
                                     <div class="inputs">
-                                        <label for="nascimento"> 
-                                           Data de Nascimento</label>
-                                        <input type="date" name="nascimento" placeholder="   Digite sua Data de Nascimento" required>
+                                        <label for="nascimento"><i class="fa-solid fa-calendar-days" id="icon"></i> Data de Nascimento</label>
+                                        <input type="date" name="nascimento" id="nascimento" placeholder="dd/mm/aaaa"  min="1900-01-01" max="2024-12-31" pattern="\d{4}-\d{2}-\d{2}" required>
 
                                     </div>
                                     <div class="inputs">
                                         <label for="cpf"><i class="fa-solid fa-address-card" id="icon"></i> CPF</label>
-                                        <input  id="cpf" type="text" name="cpf" onkeypress="return numeros(event)" placeholder="   Digite seu CPF" minlength="14" maxlength="14" required >
+                                        <input  id="cpf" type="text" name="cpf" oninput="formatarCPF(event)"  placeholder="   Digite seu CPF" minlength="14" maxlength="14" required >
 
                                     </div>
                                     <div class="inputs">
                                         <label for="telefone"><i class="fa-solid fa-phone" id="icon"></i>
                                             Telefone</label>
-                                        <input id="telefone" type="text" name="telefone" onkeypress="return numeros(event)" placeholder="   Digite seu Telefone"  minlength="14" maxlength="14" required>
+                                        <input id="telefone" type="text" name="telefone" oninput="formatarTelefone(event)" placeholder="   Digite seu Telefone"  minlength="15" maxlength="15" required>
 
                                     </div>
                                 </div>

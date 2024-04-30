@@ -1,46 +1,51 @@
-//autor luiz//
-const inputCpf = document.querySelector('#cpf');
-const inputTelefone = document.querySelector('#telefone');
+function formatarCPF(event) {
+    let input = event.target;
+    let value = input.value.replace(/\D/g, '');
+    let formattedValue = '';
 
-inputCpf.addEventListener('keypress', () => {
-    let tamanho = inputCpf.value.length;
-
-    if (tamanho == 3 || tamanho == 7) {
-        inputCpf.value += '.';
-    } else if (tamanho == 11) {
-        inputCpf.value += '-';
+    for (let i = 0; i < value.length; i++) {
+        if (i === 3 || i === 6) {
+            formattedValue += '.';
+        } else if (i === 9) {
+            formattedValue += '-';
+        }
+        formattedValue += value[i];
     }
-});
 
-inputTelefone.addEventListener('keypress', () => {
-    let tamanho = inputTelefone.value.length;
+    input.value = formattedValue;
+}
 
-    if (tamanho == 0) {
-        inputTelefone.value += '(';
-    } else if (tamanho == 3) {
-        inputTelefone.value += ')';
-    } else if (tamanho == 9) {
-        inputTelefone.value += '-';
+function formatarTelefone(event) {
+    let input = event.target;
+    let value = input.value.replace(/\D/g, '');
+    let formattedValue = '(';
+
+    for (let i = 0; i < value.length; i++) {
+        if (i === 2) {
+            formattedValue += ') ';
+        } else if (i === 7) {
+            formattedValue += '-';
+        }
+        formattedValue += value[i];
     }
-});
-//fim  //
-function numeros(evt) {
-    var number = (evt.which) ? evt.which : event.keyCode;
-    if (number > 31 && (number < 48 || number > 57))
+
+    input.value = formattedValue;
+}
+
+let hoje = new Date();
+let maxDate = new Date(hoje.getFullYear() - 18, hoje.getMonth(), hoje.getDate());
+let maxDateString = maxDate.toISOString().substr(0, 10);
+document.getElementById('#nascimento').setAttribute('max', maxDateString);
+
+function validarFormulario() {
+    let nome = document.getElementById('#nome').value.trim();
+    let email = document.getElementById('#email').value.trim();
+    let senha = document.getElementById('#senha').value.trim();
+
+    if (nome === '' || email === '' || senha === '') {
+        alert('Por favor, preencha todos os campos.');
         return false;
+    }
+
     return true;
 }
-const validarCampo = (inp, minLength) => {
-    inp.addEventListener('input', () => {
-        const value =inp.value;
-
-        if (value.length < minLength || !/^\d+$/.test(value)) {
-            inp.setCustomValidity(`O campo deve ter no mínimo ${minLength} caracteres e conter apenas números.`);
-        } else {
-            inp.setCustomValidity('');
-        }
-    });
-}
-
-validarCampo(inputCpf, 14);
-validarCampo(inputTelefone, 14);
