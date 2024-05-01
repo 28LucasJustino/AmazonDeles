@@ -50,13 +50,13 @@
                                     </div>
                                     <div class="inputs">
                                         <label for="cpf"><i class="fa-solid fa-address-card" id="icon"></i> CPF</label>
-                                        <input  id="cpf" type="text" name="cpf" oninput="formatarCPF(event)"  placeholder="   Digite seu CPF" minlength="14" maxlength="14" required >
+                                        <input  id="cpf" type="text" name="cpf" oninput="maskCPF(event)"  placeholder="   Digite seu CPF" minlength="14" maxlength="14" required >
 
                                     </div>
                                     <div class="inputs">
                                         <label for="telefone"><i class="fa-solid fa-phone" id="icon"></i>
                                             Telefone</label>
-                                        <input id="telefone" type="text" name="telefone" oninput="formatarTelefone(event)" placeholder="   Digite seu Telefone"  minlength="15" maxlength="15" required>
+                                        <input id="telefone" type="text" name="telefone" oninput="maskTelefone(event)" placeholder="   Digite seu Telefone"  minlength="15" maxlength="15" required>
 
                                     </div>
                                 </div>

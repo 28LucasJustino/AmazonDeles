@@ -1,4 +1,4 @@
-function formatarCPF(event) {
+function maskCPF(event) {
     let input = event.target;
     let value = input.value.replace(/\D/g, '');
     let formattedValue = '';
@@ -15,7 +15,7 @@ function formatarCPF(event) {
     input.value = formattedValue;
 }
 
-function formatarTelefone(event) {
+function maskTelefone(event) {
     let input = event.target;
     let value = input.value.replace(/\D/g, '');
     let formattedValue = '(';
@@ -37,7 +37,7 @@ let maxDate = new Date(hoje.getFullYear() - 18, hoje.getMonth(), hoje.getDate())
 let maxDateString = maxDate.toISOString().substr(0, 10);
 document.getElementById('#nascimento').setAttribute('max', maxDateString);
 
-function validarFormulario() {
+function verificarEspace() {
     let nome = document.getElementById('#nome').value.trim();
     let email = document.getElementById('#email').value.trim();
     let senha = document.getElementById('#senha').value.trim();
